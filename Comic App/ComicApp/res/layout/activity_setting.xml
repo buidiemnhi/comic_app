@@ -1,0 +1,335 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <ImageView
+        android:id="@+id/imgBackground"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/background"
+        android:scaleType="centerCrop" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#F879A4"
+            android:orientation="horizontal" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:gravity="center_vertical"
+                android:orientation="vertical" >
+
+                <Button
+                    android:id="@+id/btnStore"
+                    style="?android:attr/buttonStyleSmall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/en_ic_store" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical" >
+
+                <ImageView
+                    android:id="@+id/imgLogo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/en_logo_setting" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:gravity="right|center_vertical"
+                android:orientation="vertical" >
+
+                <Button
+                    android:id="@+id/btnMyComic"
+                    style="?android:attr/buttonStyleSmall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/en_ic_mycomic" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/txtSetting"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dip"
+                android:layout_marginTop="10dip"
+                android:text="@string/setting"
+                android:textColor="#9c043f" />
+
+            <LinearLayout
+                android:id="@+id/layout_user_setting"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingLeft="30dp"
+                android:paddingRight="30dp" >
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical" >
+
+                    <com.bsp.comicapp.displayimage.util.RecyclingImageView
+                        android:id="@+id/imgUserAvatar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:scaleType="centerCrop" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/layout_change_profile"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal" >
+
+                    <TableLayout
+                        android:id="@+id/table_profile"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" >
+
+                        <TableRow
+                            android:id="@+id/row_fullname"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" >
+
+                            <TextView
+                                android:id="@+id/txtFullNameTitle"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/fullname"
+                                android:textStyle="bold" />
+
+                            <EditText
+                                android:id="@+id/txtFullName"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                               
+                                android:background="@drawable/edittext_costum"
+                                android:paddingRight="5dip"
+                                android:singleLine="true"
+                                android:text=""
+                                android:textColor="@android:color/black" />
+                        </TableRow>
+
+                        <TableRow
+                            android:id="@+id/row_email"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" >
+
+                            <TextView
+                                android:id="@+id/txtEmailTitle"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/email"
+                                android:textStyle="bold" />
+
+                            <EditText
+                                android:id="@+id/txtEmail"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/edittext_costum"
+                                android:paddingRight="5dip"
+                                android:singleLine="true"
+                                android:text=""
+                                android:textColor="@android:color/black" />
+                        </TableRow>
+
+                        <TableRow
+                            android:id="@+id/row_membersince"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" >
+
+                            <TextView
+                                android:id="@+id/txtMemberSinceTitle"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/membersince"
+                                android:textStyle="bold" />
+
+                            <EditText
+                                android:id="@+id/txtMemberSince"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/edittext_costum"
+                                android:paddingRight="5dip"
+                                android:singleLine="true"
+                                android:text=""
+                                android:textColor="@android:color/black" />
+                        </TableRow>
+
+                        <TableRow
+                            android:id="@+id/row_editbutton"
+                            android:layout_width="90dp"
+                            >
+  							
+                            <Button
+                                android:id="@+id/butEditProfile"
+                                android:layout_width="90dp"
+                                android:layout_height="30dp"
+                                android:layout_marginTop="15dip"
+                                android:background="@drawable/button_custom"
+                                 />
+                        </TableRow>
+
+                        <TableRow
+                            android:id="@+id/row_language"
+                            android:layout_width="90dp"
+                            android:layout_height="wrap_content" >
+
+                            <TextView
+                                android:id="@+id/txtLanguage"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:textColor="#91173f"
+                                android:textStyle="bold" />
+
+                            <Button
+                                android:id="@+id/btnEnglish"
+                                android:layout_width="90dp"
+                                android:layout_height="30dip"
+                                android:layout_marginBottom="5dp"
+                                android:background="@drawable/button_custom"
+                                 />
+                        </TableRow>
+
+                        <TableRow
+                            android:id="@+id/row_notification"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" >
+
+                            <TextView
+                                android:id="@+id/txtNotification"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/notification"
+                                android:textColor="#91173f"
+                                android:textStyle="bold" />
+
+                            <Switch
+                                android:id="@+id/switchNotification"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="32dip"
+                                android:checked="true" />
+                        </TableRow>
+                    </TableLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#F879A4"
+                android:orientation="vertical" >
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout_social"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:paddingLeft="30dp"
+                android:paddingRight="30dp" >
+
+                <LinearLayout
+                    android:id="@+id/layout_display_social_mode"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:paddingRight="20dp" >
+
+                    <Button
+                        android:id="@+id/btnAllUsers"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/transparent"
+                        android:minHeight="0dp"
+                        android:minWidth="0dp"
+                        android:padding="7dp"
+                        android:text="@string/allusers"
+                        android:textColor="#9c043f" />
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical" >
+
+                    <GridView
+                        android:id="@+id/gvAllUsers"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:numColumns="4" >
+                    </GridView>
+                </RelativeLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#F4B027"
+            android:orientation="horizontal" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.8"
+                android:gravity="center"
+                android:orientation="vertical" >
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="horizontal" >
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.8"
+                android:gravity="right"
+                android:orientation="vertical" >
+
+                <Button
+                    android:id="@+id/btnSetting"
+                    style="?android:attr/buttonStyleSmall"
+                    android:layout_width="98dp"
+                    android:layout_height="41dp"
+                    android:background="@drawable/en_ic_setting" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

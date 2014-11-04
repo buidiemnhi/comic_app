@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="choose">#87012F</color>
+    <color name="unchoose">#f25f92</color>
+    <color name="gray_enable">#c3c3c3</color>
+    <color name="aa">#eda300</color>
+</resources>

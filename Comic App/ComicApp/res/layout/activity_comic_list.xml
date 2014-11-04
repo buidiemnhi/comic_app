@@ -1,0 +1,320 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <ImageView
+        android:id="@+id/imgBackground"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/background"
+        android:scaleType="centerCrop" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#F879A4"
+            android:orientation="horizontal" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:gravity="center_vertical"
+                android:orientation="vertical" >
+
+                <Button
+                    android:id="@+id/btnStore"
+                    style="?android:attr/buttonStyleSmall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/en_ic_store" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical" >
+
+                <ImageView
+                    android:id="@+id/imgLogo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/en_logo_comic_list" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:gravity="right|center_vertical"
+                android:orientation="vertical" >
+
+                <Button
+                    android:id="@+id/btnMyComic"
+                    style="?android:attr/buttonStyleSmall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/en_ic_mycomic" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layout_horizontal_listview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1.9"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <Button
+                android:id="@+id/btnPrevious"
+                style="?android:attr/buttonStyleSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/prevscrollviewbutton" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical" >
+
+                    <it.sephiroth.android.library.widget.HListView
+                        android:id="@+id/hListView"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btnNext"
+                style="?android:attr/buttonStyleSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/nextscrollviewbutton" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layoutCenterBar"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="#F879A4"
+            android:orientation="horizontal" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <Button
+                    android:id="@+id/btnFree"
+                    style="?android:attr/buttonStyleSmall"
+                    android:layout_width="32dp"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/button_button"
+                    android:text="@string/free"
+                    android:textColor="#ffffff"
+                    android:textSize="11sp" />
+
+                <Button
+                    android:id="@+id/btnPay"
+                    style="?android:attr/buttonStyleSmall"
+                    android:layout_width="32dp"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/button_button"
+                    android:text="@string/pay"
+                    android:textColor="#ffffff"
+                    android:textSize="11sp" />
+
+                <Button
+                    android:id="@+id/btnNew"
+                    style="?android:attr/buttonStyleSmall"
+                    android:layout_width="32dp"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/button_button"
+                    android:text="@string/comic_new"
+                    android:textColor="#ffffff"
+                    android:textSize="11sp" />
+
+                <Button
+                    android:id="@+id/btnTop"
+                    style="?android:attr/buttonStyleSmall"
+                    android:layout_width="32dp"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/button_button"
+                    android:text="@string/top"
+                    android:textColor="#ffffff"
+                    android:textSize="11sp" />
+
+                <Button
+                    android:id="@+id/btnArabicEnglishComic"
+                    style="?android:attr/buttonStyleSmall"
+                    android:layout_width="32dp"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/button_button"
+                    android:text="English"
+                    android:textColor="#ffffff"
+                    android:textSize="11sp" />
+                
+                <!-- <Button -->
+                <!-- android:id="@+id/btnArabic" -->
+                <!-- style="?android:attr/buttonStyleSmall" -->
+                <!-- android:layout_width="wrap_content" -->
+                <!-- android:layout_height="match_parent" -->
+                <!-- android:background="@null" -->
+                <!-- android:text="@string/arabic" -->
+                <!-- android:textColor="#ffffff" -->
+                <!-- android:textSize="11sp" /> -->
+
+
+                <Button
+                    android:id="@+id/btnReaderComic"
+                    style="?android:attr/buttonStyleSmall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/button_button"
+                    android:text="@string/readercomic"
+                    android:textColor="#ffffff"
+                    android:textSize="11sp" />
+
+                <LinearLayout
+                    android:id="@+id/layout_search"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="5dp"
+                    android:background="#F7C4D3"
+                    android:gravity="right"
+                    android:paddingLeft="3dp" 
+                    >
+
+                    <EditText
+                        android:id="@+id/etSearch"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@null"
+                        android:hint="@string/search"
+                        android:singleLine="true"
+                        android:imeOptions="actionDone"
+                        android:gravity="right"
+                        android:textColor="#9D033F" >
+                    </EditText>
+
+                    <Button
+                        android:id="@+id/btnSearch"
+                        style="?android:attr/buttonStyleSmall"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/ic_search" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1" >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical" >
+
+                <GridView
+                    android:id="@+id/gvComic"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:numColumns="2" >
+                </GridView>
+
+                <ListView
+                    android:id="@+id/lvComic"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:visibility="invisible" >
+                </ListView>
+            </RelativeLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
+            android:background="#F4B027"
+            android:orientation="horizontal" >
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:paddingBottom="2dip"
+                android:paddingTop="2dip" >
+
+                <Button
+                    android:id="@+id/btnInformationComicList"
+                    style="?android:attr/buttonStyleSmall"
+                    android:layout_width="14dp"
+                    android:layout_height="41dp"
+                    android:layout_marginRight="9dip"
+                    android:background="@drawable/i" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="horizontal" >
+
+                <Button
+                    android:id="@+id/btnGridViewDisplay"
+                    style="?android:attr/buttonStyleSmall"
+                    android:layout_width="98dp"
+                    android:layout_height="41dp"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@drawable/en_ic_gridview" />
+
+                <Button
+                    android:id="@+id/btnListViewDisplay"
+                    style="?android:attr/buttonStyleSmall"
+                    android:layout_width="98dp"
+                    android:layout_height="41dp"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@drawable/en_ic_listview" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                android:orientation="vertical" >
+
+                <Button
+                    android:id="@+id/btnSetting"
+                    style="?android:attr/buttonStyleSmall"
+                    android:layout_width="98dp"
+                    android:layout_height="41dp"
+                    android:background="@drawable/en_ic_setting" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,10 @@
+eclipse.preferences.version=1
+encoding//src/com/bsp/comicapp/ComicDetailActivity.java=UTF-8
+encoding//src/com/bsp/comicapp/ComicListActivity.java=UTF-8
+encoding//src/com/bsp/comicapp/FanComicActivity.java=UTF-8
+encoding//src/com/bsp/comicapp/LoginComicAppActivity.java=UTF-8
+encoding//src/com/bsp/comicapp/MyComicActivity.java=UTF-8
+encoding//src/com/bsp/comicapp/adapter/ComicListGridViewAdapter.java=UTF-8
+encoding//src/com/bsp/comicapp/adapter/ComicListHListViewAdapter.java=UTF-8
+encoding//src/com/bsp/comicapp/adapter/ComicListListViewAdapter.java=UTF-8
+encoding//src/com/bsp/comicapp/rating/RatingBar.java=UTF-8

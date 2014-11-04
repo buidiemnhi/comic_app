@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.bsp.comicapp"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="8"
+        android:targetSdkVersion="18" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/ar_comicapp"
+        android:largeHeap="true"
+        android:theme="@style/AppTheme" >
+        <service
+            android:name="com.paypal.android.sdk.payments.PayPalService"
+            android:exported="false" />
+
+        <activity android:name="com.paypal.android.sdk.payments.PaymentActivity" />
+        <activity android:name="com.paypal.android.sdk.payments.LoginActivity" />
+        <activity android:name="com.paypal.android.sdk.payments.PaymentMethodActivity" />
+        <activity android:name="com.paypal.android.sdk.payments.PaymentConfirmActivity" />
+        <activity android:name="com.paypal.android.sdk.payments.PaymentCompletedActivity" />
+        <activity
+            android:name="io.card.payment.CardIOActivity"
+            android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="io.card.payment.DataEntryActivity" />
+        <activity
+            android:name="com.bsp.comicapp.MainActivity"
+            android:label="@string/ar_comicapp"
+            android:screenOrientation="landscape" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="LoginActivity"
+            android:exported="true"
+            android:screenOrientation="landscape" >
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="comicapp"
+                    android:scheme="oauth" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.facebook.LoginActivity"
+            android:label="@string/ar_comicapp"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/app_id" />
+
+        <activity
+            android:name="ComicListActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="ComicDetailActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="MyComicActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="SettingActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="FanComicActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="ReadMyComicActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="LoginComicAppActivity"
+            android:screenOrientation="landscape" >
+        </activity>
+
+        <receiver
+            android:name="com.bsp.comicapp.util.NetworkChangeReceiver"
+            android:enabled="true" >
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.bsp.comicapp.util.ChangeBackgroundReceiver" >
+            <intent-filter>
+                <action android:name="com.bsp.comicapp.util.ChangeBackgroundReceiver" >
+                </action>
+            </intent-filter>
+        </receiver>
+    </application>
+
+</manifest>
